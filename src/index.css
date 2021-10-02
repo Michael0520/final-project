@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 #app {
-  @apply text-center justify-center text-white;
+  @apply text-center justify-center;
 }
 
 body {
@@ -15,9 +15,9 @@ body {
     @apply h-28 py-0 pl-10 pr-14 bg-transparent flex  items-center justify-between fixed top-0 left-0 w-full z-50;
   }
   .index_nav li {
-    @apply relative w-auto ml-6 cursor-pointer;
+    @apply relative w-auto ml-6 cursor-pointer text-white;
   }
   .index_title {
-    @apply h-14 py-4 text-sm leading-7 text-left;
+    @apply h-14 py-4 text-xs leading-7 text-left;
   }
 }
