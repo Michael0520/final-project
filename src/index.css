@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 #app {
-  @apply text-center justify-center;
+  @apply box-border;
 }
 
 body {
@@ -14,10 +14,25 @@ body {
   .index_nav {
     @apply h-28 py-0 pl-10 pr-14 bg-transparent flex  items-center justify-between fixed top-0 left-0 w-full z-50;
   }
-  .index_nav li {
-    @apply relative w-auto ml-6 cursor-pointer text-white;
+  .index_dropdown {
+    @apply relative w-auto ml-6 cursor-pointer text-white tracking-[3.4px];
+  }
+  .index_transparent {
+    @apply relative w-auto ml-6 cursor-pointer text-white tracking-[3.4px];
   }
   .index_title {
-    @apply h-14 py-4 text-xs leading-7 text-left;
+    @apply h-14 py-4 leading-[1.75] text-xs text-left;
+  }
+  .material-icons {
+    @apply text-white;
+  }
+  .index_fade-in-out {
+    @apply transition-all duration-300 opacity-100 ease-in-out;
+  }
+  .index_primary {
+    @apply h-[30px] mr-5 pr-[10px] pl-[12px] flex justify-center border border-[#444647] outline-none relative;
+  }
+  .index_button-title {
+    @apply flex justify-center items-center text-center text-xs leading-[1.75] tracking-[3.4px] text-[#444647];
   }
 }
