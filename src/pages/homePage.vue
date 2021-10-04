@@ -3,10 +3,11 @@
         href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet"
     />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500&display=swap"
         rel="stylesheet"
     />
 
@@ -224,10 +225,10 @@
                             w-[60px]
                             flex flex-col flex-shrink-0
                             items-center
+                            border-r-[1px] border-lightGreen
                             opacity-100
                             transition-opacity
                             duration-500
-                            border border-[#d2c8bd]
                         "
                         style="flex-basis: 60px"
                     >
@@ -248,17 +249,17 @@
                                     text-[10px] text-[#444647]
                                 "
                             >
-                                <span class="mb-[2px] transform rotate-90"
-                                    >共</span
+                                <span class="text-[10px] mb-[2px] rotate-90"
+                                    >精</span
                                 >
-                                <span class="mb-[2px] transform rotate-90"
-                                    >居</span
+                                <span class="text-[10px] mb-[2px] rotate-90"
+                                    >選</span
                                 >
-                                <span class="mb-[2px] transform rotate-90"
-                                    >生</span
+                                <span class="text-[10px] mb-[2px] rotate-90"
+                                    >房</span
                                 >
-                                <span class="mb-[2px] transform rotate-90"
-                                    >活</span
+                                <span class="text-[10px] mb-[2px] rotate-90"
+                                    >源</span
                                 >
                             </div>
                             <div
@@ -268,7 +269,7 @@
                                 "
                                 style="writing-mode: vertical-lr"
                             >
-                                Co-living
+                                Housing-Info
                             </div>
                         </div>
                     </div>
@@ -288,18 +289,18 @@
                                 class="
                                     index_watermark
                                     mt-[110px]
-                                    m-0
-                                    p-0
-                                    text-[34px]
+                                    text-[34px] text-gray
+                                    font-bold
                                     leading-[1.29]
                                     tracking-[7.7px]
-                                    font-bold
                                     not-italic
                                     absolute
                                 "
                                 style="
                                     writing-mode: vertical-rl;
                                     left: calc(50% - 22px);
+                                    font-family: source-han-serif-japanese,
+                                        serif;
                                 "
                             >
                                 共居生活
@@ -477,19 +478,18 @@
                                     Housing Info
                                 </div>
                             </div>
-                            <div class="index_popular-rooms mb-[35px] flex">
+                            <div class="index_first-rooms mb-[35px] flex">
                                 <div
                                     class="
-                                        room-card
+                                        index_first-room-card
                                         w-full
-                                        my-0
-                                        mb-[17px]
-                                        pb-[17px]
+                                        mx-[17px]
+                                        pb-[7px]
                                     "
                                 >
                                     <div
                                         class="
-                                            index_room-card-image-wrapper
+                                            index_first-room-card-image-wrapper
                                             w-full
                                         "
                                     >
@@ -498,11 +498,7 @@
                                             class="p-0 m-0 no-underline"
                                         >
                                             <div
-                                                class="
-                                                    index_room-card-image
-                                                    w-full
-                                                    bg-cover bg-center
-                                                "
+                                                class="index_room-card-image"
                                                 style="
                                                     background-image: url('https://9floor.co/backend/web/roomPhoto/20200902-50a611e8ecd6f999ca037a57539c8465.png');
                                                 "
@@ -510,7 +506,10 @@
                                         </a>
                                     </div>
                                     <div
-                                        class="index_room-card-title my-[14px]"
+                                        class="
+                                            index_first-room-card-title
+                                            my-[14px]
+                                        "
                                     >
                                         <a
                                             href="#"
@@ -539,7 +538,7 @@
                                     </div>
                                     <div
                                         class="
-                                            index_room-status
+                                            index_first-room-status
                                             h-[26px]
                                             flex
                                             justify-between
@@ -566,7 +565,7 @@
                                     </div>
                                     <div
                                         class="
-                                            index_room-card-detail
+                                            index_first-room-card-detail
                                             h-[26px]
                                             flex
                                             justify-between
@@ -583,7 +582,7 @@
                                             NTD
                                             <span
                                                 class="
-                                                    index_room-card-price
+                                                    index_first-room-card-price
                                                     text-lg
                                                     font-light
                                                     leading-[1.22]
@@ -604,7 +603,7 @@
                                     </div>
                                     <div
                                         class="
-                                            index_room-card-location
+                                            index_first-room-card-location
                                             h-6
                                             flex flex-wrap
                                             font-light
@@ -652,31 +651,592 @@
                                 </div>
                                 <div
                                     class="
-                                        room-card
+                                        index_first-room-card
                                         w-full
-                                        my-0
-                                        mb-[17px]
-                                        pb-[17px]
+                                        mx-[17px]
+                                        pb-[7px]
                                     "
-                                ></div>
+                                >
+                                    <div
+                                        class="
+                                            index_firsit-room-card-image-wrapper
+                                            w-full
+                                        "
+                                    >
+                                        <a
+                                            href="#"
+                                            class="p-0 m-0 no-underline"
+                                        >
+                                            <div
+                                                class="index_room-card-image"
+                                                style="
+                                                    background-image: url('https://9floor.co/backend/web/roomPhoto/20210910-dab1e9172fe244cb04dba6af9434cdb2.png');
+                                                "
+                                            ></div>
+                                        </a>
+                                    </div>
+                                    <div
+                                        class="
+                                            index_first-room-card-title
+                                            my-[14px]
+                                        "
+                                    >
+                                        <a
+                                            href="#"
+                                            class="
+                                                text-lg
+                                                font-medium
+                                                leading-[1.35]
+                                                tracking-[3px]
+                                                text-[#945443]
+                                            "
+                                        >
+                                            <span>仁愛</span></a
+                                        >
+                                        <a href="#">
+                                            <span
+                                                class="
+                                                    ml-[10px]
+                                                    text-lg
+                                                    font-medium
+                                                    tracking-[3px]
+                                                    text-[#444647]
+                                                "
+                                                >仁愛 RoomC</span
+                                            >
+                                        </a>
+                                    </div>
+                                    <div
+                                        class="
+                                            index_first-room-status
+                                            h-[26px]
+                                            flex
+                                            justify-between
+                                        "
+                                    >
+                                        <span
+                                            class="
+                                                text-[13px] text-[#444647]
+                                                font-light
+                                                leading-[2]
+                                                tracking-[1px]
+                                            "
+                                            >雅房</span
+                                        >
+                                        <span
+                                            class="
+                                                text-[13px] text-[#444647]
+                                                font-light
+                                                leading-[2]
+                                                tracking-[1px]
+                                            "
+                                            >招募中</span
+                                        >
+                                    </div>
+                                    <div
+                                        class="
+                                            index_first-room-card-detail
+                                            h-[26px]
+                                            flex
+                                            justify-between
+                                        "
+                                    >
+                                        <span
+                                            class="
+                                                text-[13px] text-[#444647]
+                                                font-light
+                                                leading-[2]
+                                                tracking-[1px]
+                                            "
+                                        >
+                                            NTD
+                                            <span
+                                                class="
+                                                    index_first-room-card-price
+                                                    text-lg
+                                                    font-light
+                                                    leading-[1.22]
+                                                    tracking-[1px]
+                                                "
+                                                >16500</span
+                                            >
+                                            / 月
+                                        </span>
+                                        <span
+                                            class="
+                                                text-[13px] text-[#444647]
+                                                font-light
+                                                leading-[2]
+                                                tracking-[1px]
+                                            "
+                                        ></span>
+                                    </div>
+                                    <div
+                                        class="
+                                            index_first-room-card-location
+                                            h-6
+                                            flex flex-wrap
+                                            font-light
+                                            text-xs text-[#444647]
+                                            leading-[2]
+                                            tracking-[.5px]
+                                        "
+                                    >
+                                        <span
+                                            class="mr-[15px] flex items-center"
+                                            ><i
+                                                class="
+                                                    material-icons
+                                                    mr-2
+                                                    text-[#444647]
+                                                "
+                                                style="font-size: 17px"
+                                                >directions_railway</i
+                                            >忠孝新生</span
+                                        >
+                                        <span
+                                            class="mr-[15px] flex items-center"
+                                            ><i
+                                                class="
+                                                    material-icons
+                                                    mr-2
+                                                    text-[#444647]
+                                                "
+                                                style="font-size: 17px"
+                                                >directions_walk</i
+                                            >8mins</span
+                                        ><span
+                                            class="mr-[15px] flex items-center"
+                                            ><i
+                                                class="
+                                                    material-icons
+                                                    mr-2
+                                                    text-[#444647]
+                                                "
+                                                style="font-size: 17px"
+                                                >people</i
+                                            >0 位室友</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="index_second-rooms flex">
+                                <div class="index_room-card">
+                                    <div
+                                        class="
+                                            index_second-room-image-wrapper
+                                            w-full
+                                        "
+                                    >
+                                        <a href="#">
+                                            <div
+                                                class="index_room-card-image"
+                                                style="
+                                                    background-image: url('https://9floor.co/backend/web/roomPhoto/20200902-42ad2a4d01809a0fd6fd033412ef41e2.png');
+                                                "
+                                            ></div>
+                                        </a>
+                                    </div>
+                                    <div class="index_room-title">
+                                        <a
+                                            href="#"
+                                            class="index_room-leftTitle"
+                                        >
+                                            <span class=""
+                                                >玖樓宅度假 -漫步旅店</span
+                                            >
+                                        </a>
+                                        <a
+                                            href="#"
+                                            class="index_room-rightTitle"
+                                        >
+                                            <span
+                                                class="
+                                                    ml-[10px]
+                                                    text-[18px] text-gray
+                                                    font-light
+                                                    leading-[1.35]
+                                                    tracking-[3px]
+                                                "
+                                                >浴缸雙人房</span
+                                            >
+                                        </a>
+                                    </div>
+                                    <div
+                                        class="
+                                            index_room-status
+                                            h-[26px]
+                                            flex
+                                            justify-between
+                                        "
+                                    >
+                                        <span class="">獨立套房</span>
+                                        <span>招募中</span>
+                                    </div>
+                                    <div
+                                        class="
+                                            index_room-detail
+                                            flex
+                                            justify-between
+                                        "
+                                    >
+                                        <span class="">
+                                            NTD
+                                            <span
+                                                class="
+                                                    index_price
+                                                    text-[18px]
+                                                    font-light
+                                                    leading-[1.22]
+                                                    tracking-[1px]
+                                                "
+                                                >21800</span
+                                            >
+                                            / 月
+                                        </span>
+                                        <span class=""></span>
+                                    </div>
+                                </div>
+                                <div class="index_room-card">
+                                    <div
+                                        class="
+                                            index_second-room-image-wrapper
+                                            w-full
+                                        "
+                                    >
+                                        <a href="#">
+                                            <div
+                                                class="index_room-card-image"
+                                                style="
+                                                    background-image: url('https://9floor.co/backend/web/roomPhoto/20210423-a16116723e5aae7cd6d2b715c731ee88.png');
+                                                "
+                                            ></div>
+                                        </a>
+                                    </div>
+                                    <div class="index_room-title">
+                                        <a
+                                            href="#"
+                                            class="index_room-leftTitle"
+                                        >
+                                            <span class="">玖樓璞園</span>
+                                        </a>
+                                        <a
+                                            href="#"
+                                            class="index_room-rightTitle"
+                                        >
+                                            <span
+                                                class="
+                                                    ml-[10px]
+                                                    text-[18px] text-gray
+                                                    font-light
+                                                    leading-[1.35]
+                                                    tracking-[3px]
+                                                "
+                                                >PURE Coliving 雙人雅房</span
+                                            >
+                                        </a>
+                                    </div>
+                                    <div
+                                        class="
+                                            index_room-status
+                                            h-[26px]
+                                            flex
+                                            justify-between
+                                        "
+                                    >
+                                        <span class="">雅房</span>
+                                        <span>招募中</span>
+                                    </div>
+                                    <div
+                                        class="
+                                            index_room-detail
+                                            flex
+                                            justify-between
+                                        "
+                                    >
+                                        <span class="">
+                                            NTD
+                                            <span
+                                                class="
+                                                    index_price
+                                                    text-[18px]
+                                                    font-light
+                                                    leading-[1.22]
+                                                    tracking-[1px]
+                                                "
+                                                >13500</span
+                                            >
+                                            / 月
+                                        </span>
+                                        <span class=""></span>
+                                    </div>
+                                </div>
+                                <div class="index_room-card">
+                                    <div
+                                        class="
+                                            index_second-room-image-wrapper
+                                            w-full
+                                        "
+                                    >
+                                        <a href="#">
+                                            <div
+                                                class="index_room-card-image"
+                                                style="
+                                                    background-image: url('https://9floor.co/backend/web/roomPhoto/20210423-600c9c66739fa456b63eaf810e068428.png');
+                                                "
+                                            ></div>
+                                        </a>
+                                    </div>
+                                    <div class="index_room-title">
+                                        <a
+                                            href="#"
+                                            class="index_room-leftTitle"
+                                        >
+                                            <span class="">玖樓璞園 </span>
+                                        </a>
+                                        <a
+                                            href="#"
+                                            class="index_room-rightTitle"
+                                        >
+                                            <span
+                                                class="
+                                                    ml-[10px]
+                                                    text-[18px] text-gray
+                                                    font-light
+                                                    leading-[1.35]
+                                                    tracking-[3px]
+                                                "
+                                                >PURE Coliving 單人雅房</span
+                                            >
+                                        </a>
+                                    </div>
+                                    <div
+                                        class="
+                                            index_room-status
+                                            h-[26px]
+                                            flex
+                                            justify-between
+                                        "
+                                    >
+                                        <span class="">雅房</span>
+                                        <span>招募中</span>
+                                    </div>
+                                    <div
+                                        class="
+                                            index_room-detail
+                                            flex
+                                            justify-between
+                                        "
+                                    >
+                                        <span class="">
+                                            NTD
+                                            <span
+                                                class="
+                                                    index_price
+                                                    text-[18px]
+                                                    font-light
+                                                    leading-[1.22]
+                                                    tracking-[1px]
+                                                "
+                                                >12500</span
+                                            >
+                                            / 月
+                                        </span>
+                                        <span class=""></span>
+                                    </div>
+                                </div>
                             </div>
                         </section>
-                        <section class="index_more-room"></section>
+                        <section
+                            class="
+                                index_more-room
+                                py-[42px]
+                                mb-[53px]
+                                bg-[#e9ece5]
+                                flex flex-col
+                                items-center
+                            "
+                        >
+                            <div
+                                class="
+                                    max-w-[344px]
+                                    mb-6
+                                    text-gray text-[15px] text-center
+                                    font-light
+                                    leading-[1.35]
+                                    tracking-[2.5px]
+                                "
+                            >
+                                加入我們，分享彼此的世界，如約翰藍儂曾《想像》的那樣。
+                            </div>
+                            <a href="#" class="index_button">
+                                <div
+                                    class="
+                                        flex
+                                        justify-center
+                                        items-center
+                                        text-gray text-xs text-center
+                                        leading-[1.75]
+                                        tracking-[3.4px]
+                                    "
+                                >
+                                    <i
+                                        class="
+                                            material-icons
+                                            mr-[3px]
+                                            text-gray
+                                        "
+                                        style="font-size: 16px"
+                                        >search</i
+                                    >
+                                    更多物件
+                                </div>
+                            </a>
+                        </section>
                         <div class="index_view-marker p-0 m-0 opacity-0"></div>
                     </div>
-                    <div class="index_sider index_right"></div>
+                    <div
+                        class="
+                            index_sider index_right
+                            w-[60px]
+                            flex flex-col flex-shrink-0
+                            items-center
+                            border-r-0 border-l-[1px] border-lightGreen
+                            opacity-100
+                            transition-opacity
+                            duration-500
+                        "
+                        style="flex-basis: 60px"
+                    >
+                        <div
+                            class="
+                                mt-[60px]
+                                fixed
+                                top-[72px]
+                                opacity-100
+                                transition-opacity
+                                duration-300
+                            "
+                        ></div>
+                    </div>
                 </div>
             </div>
-            <footer class="index_footer"></footer>
+            <footer class="index_footer">
+                <div class="index_footer-top">
+                    <div class="index_footer-sitmap flex">
+                        <div
+                            class="index_footer-column flex flex-col mr-[60px]"
+                        >
+                            <h5 class="mb-[25px] font-medium">入住玖樓</h5>
+                            <a href="#" class="">條件搜尋</a>
+                            <a href="#" class="">地圖搜尋</a>
+                            <a
+                                href="#"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class=""
+                                >玖樓璞園</a
+                            >
+                        </div>
+                        <div
+                            class="index_footer-column flex flex-col mr-[60px]"
+                        >
+                            <h5 class="mb-[25px] font-medium">玖樓</h5>
+                            <a href="#" class="">關於玖樓</a>
+                            <a href="#" class="">團隊夥伴</a>
+                            <a href="#" class="">空間管理</a>
+                            <a href="#" class="">共同生活</a>
+                            <a
+                                href="#"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class=""
+                                >最新消息</a
+                            >
+                        </div>
+                        <div
+                            class="index_footer-column flex flex-col mr-[60px]"
+                        >
+                            <h5 class="mb-[25px] font-medium">協助</h5>
+                            <a href="#" class="">如何申請</a>
+                            <a
+                                href="#"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class=""
+                                >常見問題</a
+                            >
+                            <a href="#" class="">聯絡我們</a>
+                            <a href="#" class="">媒體專區</a>
+                        </div>
+                    </div>
+                    <div class="index_footer-info flex flex-col justify-end">
+                        <div class="index_footer-logo w-[90% pt-[5px] mx-auto">
+                            <img
+                                src=""
+                                alt=""
+                                class="w-full h-auto overflow-hidden"
+                            />
+                            <!-- TODO:footer-height 29px width 72px -->
+                            9floor
+                        </div>
+                        <div class="index_footer-social-media ml-auto">
+                            <a
+                                target="_blank"
+                                href="https://www.instagram.com/9floor.co/"
+                                rel="noopener noreferrer"
+                            >
+                                <img src="" alt="" />IG
+                            </a>
+                            <a
+                                target="_blank"
+                                href="https://www.facebook.com/9floor.co/"
+                                rel="noopener noreferrer"
+                            >
+                                <img src="" alt="" />FB
+                            </a>
+                            <a
+                                target="_blank"
+                                href="https://open.spotify.com/user/cmas3ut0ye02tk1q56qwkf3pu?si=1MWz3EIzQYyVmYMd2CbmbQ"
+                                rel="noopener noreferrer"
+                            >
+                                <img src="" alt="" />SPOTIFY
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="index_footer-bottom">
+                    <span class="text-xs text-gray tracking-[1.1px]">
+                        <span role="img" aria-labelledby="copy-right">©</span>
+                        玖樓 9floor 2019
+                    </span>
+                    <div
+                        class="
+                            index_footer-policy
+                            text-xs text-gray
+                            tracking-[1.1px]
+                        "
+                    >
+                        <a href="#" class="">
+                            <span class="ml-[15px]">服務條款</span></a
+                        >
+                        <a href="#" class="">
+                            <span class="ml-[15px]">服務說明</span></a
+                        >
+                        <a href="#" class="">
+                            <span class="ml-[15px]">隱私權政策</span></a
+                        >
+                        <a href="#" class="">
+                            <span class="ml-[15px]">網站地圖</span></a
+                        >
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
 </template>
 
 <style>
-.content {
-    /* 字型 */
-    font-family: "Noto Sans TC", sans-serif;
-}
 .index_banner::before {
     /* 背景遮罩 */
     content: "";
@@ -687,10 +1247,49 @@
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.3);
 }
+.index_button {
+    @apply h-[30px] mr-5 flex justify-center relative pr-[10px] pl-3 border border-gray outline-none transition-all duration-300;
+}
+
+.index_room-card {
+    @apply w-full mx-[17px] pb-[7px];
+}
+/* Card-images */
 .index_room-card-image {
+    @apply w-full bg-cover bg-center;
+}
+.index_room-card-image::after {
     display: block;
     content: "";
     padding-top: 60%;
+}
+.index_room-title {
+    @apply my-[14px];
+}
+.index_room-leftTitle {
+    @apply text-orange text-lg font-medium leading-[1.35] tracking-[3px];
+}
+.index_room-detail > span {
+    @apply text-[13px] font-light leading-[2] tracking-[1px] text-gray;
+}
+.index_room-status span {
+    @apply text-[13px] font-light leading-[2] tracking-[1px] text-gray;
+}
+/* footer */
+.index_footer {
+    @apply w-full text-gray bg-[#f3f2ef];
+}
+.index_footer-top {
+    @apply max-w-7xl m-auto  py-10 px-[60px] flex justify-between;
+}
+.index_footer-column a {
+    @apply mb-[15px] text-xs text-gray tracking-[.5px];
+}
+.index_footer-social-media a {
+    @apply inline-flex w-[14px] h-[14px] ml-[15px] p-[5px] box-content bg-orange rounded-[50%];
+}
+.index_footer-bottom {
+    @apply max-w-7xl h-[50px] px-[60px]  m-auto text-xs flex justify-between items-center tracking-[1.1px] border-t border-[#d2c8bd];
 }
 </style>
 

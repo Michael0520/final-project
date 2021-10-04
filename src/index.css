@@ -2,15 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-#app {
-  @apply box-border;
-}
 
-body {
-  @apply bg-white;
-}
 
 @layer components {
+  .content {
+    font-family: "Noto Sans TC", sans-serif;
+  }
   .index_nav {
     @apply h-28 py-0 pl-10 pr-14 bg-transparent flex  items-center justify-between fixed top-0 left-0 w-full z-50;
   }
@@ -29,10 +26,19 @@ body {
   .index_fade-in-out {
     @apply transition-all duration-300 opacity-100 ease-in-out;
   }
-  .index_primary {
-    @apply h-[30px] mr-5 pr-[10px] pl-[12px] flex justify-center border border-[#444647] outline-none relative;
-  }
   .index_button-title {
-    @apply flex justify-center items-center text-center text-xs leading-[1.75] tracking-[3.4px] text-[#444647];
+    @apply flex justify-center items-center text-center text-xs leading-[1.75] tracking-[3.4px] text-gray;
+  }
+}
+
+@layer base{
+  body{
+    @apply leading-[1.5];
+    font-family: Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h5{
+    @apply p-0 m-0 font-light not-italic text-gray text-[15px] leading-[1.35] tracking-[2.5px]
   }
 }
