@@ -1237,15 +1237,14 @@
 </template>
 
 <style>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .index_banner::before {
     /* 背景遮罩 */
+    @apply w-full h-screen bg-black bg-opacity-30 absolute top-0 left-0;
     content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.3);
 }
 .index_button {
     @apply h-[30px] mr-5 flex justify-center relative pr-[10px] pl-3 border border-gray outline-none transition-all duration-300;
