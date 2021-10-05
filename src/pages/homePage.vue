@@ -12,103 +12,7 @@
     />
 
     <div class="content">
-        <header class="index_header w-full">
-            <nav class="index_nav">
-                <a class="m-0 p-0 items-center" href="#" id="logo">
-                    <!-- <img src="../assets/logo.png" class="w-20 h-7 bg-green-300" alt="logo" /> -->
-                    <h1 class="text-3xl text-white tracking-wider">9floor</h1>
-                </a>
-                <ul class="my-4 flex items-center">
-                    <li class="index_dropdown">
-                        <div class="index_title">
-                            入住玖樓
-                            <i
-                                class="material-icons ml-[3px]"
-                                style="font-size: 12px"
-                                >keyboard_arrow_down</i
-                            >
-                        </div>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </li>
-                    <li class="index_dropdown">
-                        <div class="index_title">
-                            玖樓
-                            <i
-                                class="material-icons ml-[3px]"
-                                style="font-size: 12px"
-                                >keyboard_arrow_down</i
-                            >
-                            <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="index_dropdown">
-                        <div class="index_title">
-                            服務
-                            <i
-                                class="material-icons ml-[3px]"
-                                style="font-size: 12px"
-                                >keyboard_arrow_down</i
-                            >
-                            <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="index_dropdown">
-                        <div class="index_title">
-                            <a
-                                href="#"
-                                class="p-0 m-0 no-underline bg-transparent"
-                                >日誌</a
-                            >
-                        </div>
-                    </li>
-                    <li class="index_transparent">
-                        <div class="index_title">
-                            <button class="tracking-[3.4px]">登入</button>
-                        </div>
-                    </li>
-                    <li class="index_transparent">
-                        <div class="flex justify-center items-center">
-                            <div class="index_title py-3.5">
-                                <button
-                                    class="
-                                        index_fade-in-out
-                                        pl-3
-                                        pr-2.5
-                                        box-content
-                                        border border-white
-                                    "
-                                >
-                                    <div
-                                        class="
-                                            flex
-                                            justify-center
-                                            items-center
-                                            text-xs text-center
-                                            leading-[1.75]
-                                            tracking-[3.4px]
-                                        "
-                                    >
-                                        註冊
-                                    </div>
-                                </button>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+        <NavBar />
 
         <div class="index_content index_show opacity-100">
             <!-- TODO:index_show 需要增加 視差滾動效果
@@ -1180,8 +1084,13 @@
                             <!-- TODO:footer-height 29px width 72px -->
                             9floor
                         </div>
-                        <div class="index_footer-social-media ml-auto">
-                            <a
+                        <div
+                            class="index_footer-social-media"
+                            :class="goToTop ? 'goTopAfter' : ''"
+                            @click="goTop()"
+                        >
+                            <span class="material-icons"> expand_less </span>
+                            <!-- <a
                                 target="_blank"
                                 href="https://www.instagram.com/9floor.co/"
                                 rel="noopener noreferrer"
@@ -1201,7 +1110,7 @@
                                 rel="noopener noreferrer"
                             >
                                 <img src="" alt="" />SPOTIFY
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </div>
@@ -1246,10 +1155,6 @@
     @apply w-full h-screen bg-black bg-opacity-30 absolute top-0 left-0;
     content: "";
 }
-.index_button {
-    @apply h-[30px] mr-5 flex justify-center relative pr-[10px] pl-3 border border-gray outline-none transition-all duration-300;
-}
-
 .index_room-card {
     @apply w-full mx-[17px] pb-[7px];
 }
@@ -1284,8 +1189,12 @@
 .index_footer-column a {
     @apply mb-[15px] text-xs text-gray tracking-[.5px];
 }
-.index_footer-social-media a {
-    @apply inline-flex w-[14px] h-[14px] ml-[15px] p-[5px] box-content bg-orange rounded-[50%];
+.index_footer-social-media {
+    @apply w-[60px] h-[60px] text-[30px] text-center text-white rounded-[30px] bg-orange bg-opacity-50  leading-[30px]  fixed bottom-[-100px] right-[5%] z-10 transition-all ease-in-out cursor-pointer;
+    @apply hover:bg-opacity-100 duration-300 ease-in-out;
+}
+.goTopAfter {
+    @apply bottom-[100px] transition-all duration-300 ease-in-out;
 }
 .index_footer-bottom {
     @apply max-w-7xl h-[50px] px-[60px]  m-auto text-xs flex justify-between items-center tracking-[1.1px] border-t border-[#d2c8bd];
@@ -1293,11 +1202,42 @@
 </style>
 
 <script>
+import NavBar from "../components/NavBar.vue";
+
 export default {
-    name: "homePage",
-    props: {
-        msg: String,
-        // image: 'https://9floor.co/backend/web/banner/20200408-7613a5c701c8d4a8f5f42d363c2a536b.png',
+    data() {
+        return {
+            name: "homePage",
+            scrollNum: 0,
+            goToTop: false,
+            props: {
+                // msg: String,
+                // image: 'https://9floor.co/backend/web/banner/20200408-7613a5c701c8d4a8f5f42d363c2a536b.png',
+            },
+        };
+    },
+    methods: {
+        goTop() {
+            document.documentElement.scrollTop = 0;
+        },
+    },
+    mounted() {
+        window.addEventListener("scroll", () => {
+            let clientTop =
+                document.documentElement.scrollTop ||
+                document.body.scrollTop ||
+                window.pageYOffset;
+            this.scrollNum = clientTop;
+            // console.log(`目前頁面高度 ${clientTop}`);
+            if (clientTop >= 800) {
+                this.goToTop = true;
+            } else {
+                this.goToTop = false;
+            }
+        });
+    },
+    components: {
+        NavBar,
     },
 };
 </script>
